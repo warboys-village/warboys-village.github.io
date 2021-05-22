@@ -1,6 +1,5 @@
 ---
-title: Warboys
+title: Home
 layout: home
 ---
 
-asdfasdfasdf
