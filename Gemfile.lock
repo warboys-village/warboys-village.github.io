@@ -282,8 +282,10 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-commonmark-ghpages
   jekyll-feed (~> 0.12)
   jekyll-theme-yat
+  jemoji
   nokogiri (>= 1.11.4)
   tzinfo (~> 1.2)
   tzinfo-data

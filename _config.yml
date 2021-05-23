@@ -23,6 +23,12 @@ remote_theme: "jeffreytse/jekyll-theme-yat"
 author: 
 copyright: Copyright © 2021
 
+markdown: CommonMarkGhPages
+commonmark:
+  options: ["SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
+
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
