@@ -13,7 +13,7 @@ description: The Cambridgeshire village famous for witches trials
 baseurl: 
 url: https://warboys.uk
 twitter_username: 
-github_username: 
+github_username: warboys-village
 theme: jekyll-theme-yat
 plugins:
 - jekyll-feed
