@@ -11,7 +11,7 @@ collections:
 email: website@warboys.uk
 description: The Cambridgeshire village famous for witches trials
 baseurl: 
-url: 
+url: https://warboys.uk
 twitter_username: 
 github_username: 
 theme: jekyll-theme-yat
@@ -19,7 +19,7 @@ plugins:
 - jekyll-feed
 - jemoji
 remote_theme: jeffreytse/jekyll-theme-yat
-author: 
+author: Warboys
 copyright: Copyright © 2021
 markdown: CommonMarkGhPages
 commonmark:
