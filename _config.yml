@@ -19,7 +19,7 @@ plugins:
 - jekyll-feed
 - jemoji
 remote_theme: jeffreytse/jekyll-theme-yat
-author: Warboys
+author: 
 copyright: Copyright © 2021
 markdown: CommonMarkGhPages
 commonmark:
