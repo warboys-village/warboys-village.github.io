@@ -1,6 +1,6 @@
 ---
 title: Home
+banner: "/uploads/warboys-sign.jpg"
 layout: home
-banner: "/assets/images/banners/home.jpeg"
 ---
 
