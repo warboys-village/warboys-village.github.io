@@ -13,8 +13,7 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 #gem "jekyll", "~> 4.2.0"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
-# gem "minima", "~> 2.5"
-gem "jekyll-theme-yat"
+gem "jekyll-theme-yat", "~> 1.10.0"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
@@ -22,7 +21,7 @@ gem "jekyll-theme-yat"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
-  gem "github-pages"
+  gem "github-pages", "~> 232"
   gem "jemoji"
   gem 'jekyll-commonmark-ghpages'
 end
