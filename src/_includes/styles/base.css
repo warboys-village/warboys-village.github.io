@@ -1,0 +1,45 @@
+#content {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 4fr;
+    gap: 5px 5px;
+    max-width: 940px;
+}
+@media (max-width: 700px) {
+    #content {
+        grid-template-columns: none;
+    }
+}
+#content > nav {
+    border-right: thin solid silver
+}
+#content > nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#content > nav li a {
+    text-decoration: none;
+    display: block;
+    padding: 0.5em 1em;
+}
+#content > nav li a:hover {
+    background-color: navy;
+    color: white;
+}
+#content > main {
+    padding: 10px
+}
+main h1:first-child {
+    margin-top: 0;
+}
+
+#content > header {
+    font-size: xx-large;
+    border-bottom: 3px solid silver;
+}
+
+#content > header, #content > footer {
+    grid-column-start: 1;
+    grid-column-end: -1;
+}

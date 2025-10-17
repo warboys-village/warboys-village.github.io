@@ -1,0 +1,37 @@
+{% set css %}
+  {% include "styles/base.css" %}
+{% endset %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+
+  <style>
+    {{ css | cssmin | safe }}
+  </style>
+</head>
+<body>
+
+<div id="content">
+  <header>
+    {% include 'layouts/header.njk' %}
+  </header>
+
+  <nav>
+    {% include 'layouts/nav.njk' %}
+  </nav>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer>
+    {% include 'layouts/footer.njk' %}
+  </footer>
+</div>
+
+</body>
+</html>
