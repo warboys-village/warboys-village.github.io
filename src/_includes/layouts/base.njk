@@ -16,21 +16,29 @@
 <body>
 
 <div id="content">
+  {% block header %}
   <header>
     {% include 'layouts/header.njk' %}
   </header>
+  {% endblock %}
 
+  {% block nav %}
   <nav>
     {% include 'layouts/nav.njk' %}
   </nav>
+  {% endblock %}
 
   <main>
-    {{ content | safe }}
+    {% block content %}
+      {{ content | safe }}
+    {% endblock %}
   </main>
 
+  {% block footer %}
   <footer>
     {% include 'layouts/footer.njk' %}
   </footer>
+  {% endblock %}
 </div>
 
 </body>

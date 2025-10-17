@@ -1,0 +1,62 @@
+{% set css %}
+  {% include 'styles/landing.css' %}
+{% endset %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} | Warboys Village</title>
+
+  <style>
+    {{ css | cssmin | safe }}
+  </style>
+</head>
+<body>
+
+  <header class="landing-header">
+    <nav class="landing-nav">
+      <div class="logo">Warboys Village</div>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Welcome to Warboys</h1>
+        <p>A charming village nestled in the heart of Cambridgeshire.</p>
+        <a href="#" class="cta-button">Explore the Village</a>
+      </div>
+    </section>
+
+    <section class="features">
+      <h2>Discover Our Village</h2>
+      <div class="feature-grid">
+        <div class="feature">
+          <h3>Rich History</h3>
+          <p>Explore the fascinating history of Warboys, from its ancient origins to its role in modern times.</p>
+        </div>
+        <div class="feature">
+          <h3>Vibrant Community</h3>
+          <p>Get to know the friendly faces and local businesses that make our village a wonderful place to live.</p>
+        </div>
+        <div class="feature">
+          <h3>Beautiful Scenery</h3>
+          <p>Enjoy the picturesque landscapes and tranquil countryside that surround our beautiful village.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="landing-footer">
+    <p>&copy; 2025 Warboys Village. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
