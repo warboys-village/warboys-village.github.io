@@ -1,0 +1,21 @@
+---
+permalink: /ptfa/events/calendar.ics
+---
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Warboys Primary Academy PTFA//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Warboys Primary Academy PTFA Events
+X-WR-TIMEZONE:Europe/London
+{% for event in collections.datedEvents %}
+BEGIN:VEVENT
+UID:{{ event.url }}
+DTSTAMP:{{ event.date | date("YYYYMMDDTHHmmss") }}
+DTSTART;VALUE=DATE:{{ event.date | date("YYYYMMDD") }}
+SUMMARY:{{ event.data.title }}
+DESCRIPTION:{{ event.data.summary }}
+URL:{{ event.url }}
+END:VEVENT
+{% endfor %}
+END:VCALENDAR

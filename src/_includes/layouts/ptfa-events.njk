@@ -4,11 +4,40 @@ layout: ptfa-base
 
 <h1>{{ title }}</h1>
 
+<div class="sidebar-calendar-widget">
+  <h3>Add calendar to</h3>
+  <div class="calendar-links">
+    <a href="webcal://warboys.uk/ptfa/events/calendar.ics" target="_blank" rel="noopener noreferrer" class="calendar-button">
+      <img src="/images/google-calendar-icon.svg" alt="Google Calendar">
+      <span>Google Calendar</span>
+    </a>
+    <a href="webcal://warboys.uk/ptfa/events/calendar.ics" target="_blank" rel="noopener noreferrer" class="calendar-button">
+      <img src="/images/apple-calendar-icon.svg" alt="Apple Calendar">
+      <span>Apple Calendar</span>
+    </a>
+    <a href="/ptfa/events/calendar.ics" class="calendar-button calendar-button-other">
+      <span>Other (.ics file)</span>
+    </a>
+  </div>
+</div>
+
+<h2>Upcoming Events</h2>
 <div class="event-calendar">
-  {% for event in collections.events %}
+  {% for event in collections.datedEvents %}
     <div class="event-listing">
       <h2><a href="{{ event.url }}">{{ event.data.title }}</a></h2>
-      <p><strong>Date:</strong> {{ event.data.date | date("Do MMMM YYYY") }}</p>
+      <p><strong>Date:</strong> {{ event.data.date | date("D MMMM YYYY") }}</p>
+      <p>{{ event.data.summary }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+<h2>Future Events</h2>
+<div class="event-calendar">
+  {% for event in collections.futureEvents %}
+    <div class="event-listing">
+      <h2><a href="{{ event.url }}">{{ event.data.title }}</a></h2>
+      <p>{{ event.data.season }}</p>
       <p>{{ event.data.summary }}</p>
     </div>
   {% endfor %}

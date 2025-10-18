@@ -3,6 +3,12 @@ layout: ptfa-base
 ---
 
 <h1>{{ title }}</h1>
-<p><strong>Date:</strong> {{ date | date: "Do MMMM YYYY" }}</p>
+<p><a href="/ptfa/events/">Back to PTFA Events</a></p>
+{% if season %}
+<p><strong>Season:</strong> {{ season }}</p>
+{% else %}
+<p><strong>Date:</strong> {{ date | date("Do MMMM YYYY") }}</p>
+{% endif %}
+
 
 {{ content | safe }}
