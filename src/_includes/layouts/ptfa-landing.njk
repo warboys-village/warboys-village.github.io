@@ -1,87 +1,51 @@
-{% set css %}
-  {% include "styles/ptfa.css" %}
-{% endset %}
+---
+layout: ptfa-base
+---
 
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }} | Warboys Primary Academy PTFA</title>
+<div class="panel-row">
+  <div class="panel one-third">
+    <h2>Events Calendar</h2>
+    <p>Check out our upcoming events and join in the fun!</p>
+    <a href="/ptfa/events" class="cta-button">View Calendar</a>
+  </div>
+  <div class="panel two-thirds">
+    <h2>Support the PTFA</h2>
+    <p>Find out how you can support our fundraising efforts and make a difference for our school.</p>
+    <a href="#" class="cta-button">Learn More</a>
+  </div>
+</div>
 
-  <style>
-    {{ css | cssmin | safe }}
-  </style>
+<div class="panel-row">
+  <div class="panel two-thirds">
+    <h2>Second-Hand Uniform Shop</h2>
+    <p>Grab a bargain and support the school with our second-hand uniform shop.</p>
+    <a href="#" class="cta-button">Visit Shop</a>
+  </div>
+  <div class="panel one-third">
+    <h2>Get Involved</h2>
+    <p>We're always looking for volunteers. Find out how you can help!</p>
+    <a href="#" class="cta-button">Join Us</a>
+  </div>
+</div>
 
-</head>
-<body>
-
-  <header class="ptfa-header">
-    <nav class="ptfa-nav">
-      <div class="ptfa-logo">Warboys PTFA</div>
-      <ul>
-        <li><a href="/ptfa">Home</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Uniform Shop</a></li>
-        <li><a href="#">Get Involved</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="ptfa-main">
-    {{ content | safe }}
-
-    <div class="panel-row">
-      <div class="panel one-third">
-        <h2>Events Calendar</h2>
-        <p>Check out our upcoming events and join in the fun!</p>
-        <a href="#" class="cta-button">View Calendar</a>
-      </div>
-      <div class="panel two-thirds">
-        <h2>Support the PTFA</h2>
-        <p>Find out how you can support our fundraising efforts and make a difference for our school.</p>
-        <a href="#" class="cta-button">Learn More</a>
-      </div>
+<section class="team-section">
+  <h2>Meet the Team</h2>
+  <div class="team-grid">
+    <div class="team-member">
+      <img src="https://via.placeholder.com/150" alt="Team Member 1">
+      <h3>Jane Doe</h3>
+      <p>Chair</p>
     </div>
-
-    <div class="panel-row">
-      <div class="panel two-thirds">
-        <h2>Second-Hand Uniform Shop</h2>
-        <p>Grab a bargain and support the school with our second-hand uniform shop.</p>
-        <a href="#" class="cta-button">Visit Shop</a>
-      </div>
-      <div class="panel one-third">
-        <h2>Get Involved</h2>
-        <p>We're always looking for volunteers. Find out how you can help!</p>
-        <a href="#" class="cta-button">Join Us</a>
-      </div>
+    <div class="team-member">
+      <img src="https://via.placeholder.com/150" alt="Team Member 2">
+      <h3>John Smith</h3>
+      <p>Treasurer</p>
     </div>
+    <div class="team-member">
+      <img src="https://via.placeholder.com/150" alt="Team Member 3">
+      <h3>Sarah Jones</h3>
+      <p>Secretary</p>
+    </div>
+  </div>
+</section>
 
-    <section class="team-section">
-      <h2>Meet the Team</h2>
-      <div class="team-grid">
-        <div class="team-member">
-          <img src="https://via.placeholder.com/150" alt="Team Member 1">
-          <h3>Jane Doe</h3>
-          <p>Chair</p>
-        </div>
-        <div class="team-member">
-          <img src="https://via.placeholder.com/150" alt="Team Member 2">
-          <h3>John Smith</h3>
-          <p>Treasurer</p>
-        </div>
-        <div class="team-member">
-          <img src="https://via.placeholder.com/150" alt="Team Member 3">
-          <h3>Sarah Jones</h3>
-          <p>Secretary</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="ptfa-footer">
-    <p>&copy; 2025 Warboys Primary Academy PTFA. All rights reserved.</p>
-  </footer>
-
-</body>
-</html>

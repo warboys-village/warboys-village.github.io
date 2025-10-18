@@ -1,0 +1,37 @@
+{% set css %}
+  {% include "styles/ptfa.css" %}
+{% endset %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} | Warboys Primary Academy PTFA</title>
+  <style>
+    {{ css | cssmin | safe }}
+  </style>
+</head>
+<body>
+
+  <header class="ptfa-header">
+    <nav class="ptfa-nav">
+      <div class="ptfa-logo">Warboys PTFA</div>
+      <ul>
+        <li><a href="/ptfa">Home</a></li>
+        <li><a href="/ptfa/events">Events</a></li>
+        <li><a href="#">Uniform Shop</a></li>
+        <li><a href="#">Get Involved</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="ptfa-main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="ptfa-footer">
+    <p>&copy; 2025 Warboys Primary Academy PTFA. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

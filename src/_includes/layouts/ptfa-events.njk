@@ -1,0 +1,15 @@
+---
+layout: ptfa-base
+---
+
+<h1>{{ title }}</h1>
+
+<div class="event-calendar">
+  {% for event in collections.events %}
+    <div class="event-listing">
+      <h2><a href="{{ event.url }}">{{ event.data.title }}</a></h2>
+      <p><strong>Date:</strong> {{ event.data.date | date("Do MMMM YYYY") }}</p>
+      <p>{{ event.data.summary }}</p>
+    </div>
+  {% endfor %}
+</div>
