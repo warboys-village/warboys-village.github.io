@@ -6,7 +6,7 @@ body {
 
 .ptfa-header {
     background: #005D43;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -484,7 +484,7 @@ body {
     padding: 0;
     position: absolute;
     right: 1rem;
-    top: 1.5rem;
+    top: 1rem;
     z-index: 1000;
 }
 
@@ -548,5 +548,17 @@ body {
     .ptfa-nav-toggle.active .hamburger-bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+}
+
+.ptfa-logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.ptfa-logo-img {
+    height: 56px; /* Adjust size as needed */
+    margin-right: 0.75rem;
 }
 
