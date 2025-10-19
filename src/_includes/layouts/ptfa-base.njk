@@ -16,12 +16,19 @@
   <header class="ptfa-header">
     <nav class="ptfa-nav">
       <div class="ptfa-logo"><a href="/ptfa">Warboys PTFA</a></div>
-      <ul>
-        <li><a href="/ptfa/fundraising">Support Us</a></li>
-        <li><a href="/ptfa/events">Events</a></li>
-        <li><a href="/ptfa/uniform">Uniform Shop</a></li>
-        <li><a href="/ptfa/get-involved">Get Involved</a></li>
-      </ul>
+      <button class="ptfa-nav-toggle" aria-label="Open navigation menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+      <div class="ptfa-nav-links">
+        <ul>
+          <li><a href="/ptfa/fundraising">Support Us</a></li>
+          <li><a href="/ptfa/events">Events</a></li>
+          <li><a href="/ptfa/uniform">Uniform Shop</a></li>
+          <li><a href="/ptfa/get-involved">Get Involved</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
@@ -33,6 +40,16 @@
     <p>&copy; 2025 Warboys Academy PTFA. All rights reserved.</p>
     <p>Registered charity no. 1027410 in England and Wales.</p>
   </footer>
+
+  <script>
+    const navToggle = document.querySelector('.ptfa-nav-toggle');
+    const navLinks = document.querySelector('.ptfa-nav-links');
+
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
