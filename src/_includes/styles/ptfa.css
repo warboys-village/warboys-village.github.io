@@ -188,3 +188,179 @@ body {
 .calendar-button-other img {
     display: none; /* Hide the image for the 'Other' button */
 }
+
+/* Fundraising Panels */
+.fundraising-panels {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Force two columns */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.fundraising-panel {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.fundraising-panel:hover {
+    transform: translateY(-5px);
+}
+
+.fundraising-logo-container {
+    width: 80px;
+    height: 80px;
+    background-color: #e0f2f1; /* Light teal background for logo */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.fundraising-logo {
+    width: 48px;
+    height: 48px;
+    color: #00A99D; /* Teal color for SVG icons */
+}
+
+.fundraising-panel h3 {
+    color: #00A99D;
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.4rem;
+}
+
+.fundraising-header-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.fundraising-panel p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1; /* Allows description to take up available space */
+    margin-bottom: 1.5rem;
+}
+
+.fundraising-button {
+    display: inline-block;
+    background-color: #00A99D;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Pushes button to the bottom */
+}
+
+.fundraising-button:hover {
+    background-color: #008C80;
+}
+
+.fundraising-code-block {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.fundraising-code-block p {
+    margin: 0;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.fundraising-code-block strong {
+    font-size: 1.1rem;
+    color: #005D43;
+}
+
+.fundraising-allowed-list,
+.fundraising-not-allowed-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    width: 100%;
+}
+
+.fundraising-allowed-list li,
+.fundraising-not-allowed-list li {
+    padding-left: 0; /* Remove space for custom icon */
+    margin-bottom: 0.3rem;
+    line-height: 1.4;
+}
+
+.fundraising-allowed-list li::before,
+.fundraising-not-allowed-list li::before {
+    content: none; /* Remove individual tick/cross */
+}
+
+.fundraising-allowed-heading,
+.fundraising-not-allowed-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.fundraising-allowed-heading::before {
+    content: '\2713'; /* Large green tick */
+    color: #28a745;
+    font-size: 1.5em;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.fundraising-not-allowed-heading::before {
+    content: '\2717'; /* Large red X */
+    color: #dc3545;
+    font-size: 1.5em;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+/* Style for generic unordered lists within fundraising panels (e.g., cashback shops) */
+.fundraising-panel ul:not(.fundraising-allowed-list):not(.fundraising-not-allowed-list) {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 1.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.fundraising-panel ul:not(.fundraising-allowed-list):not(.fundraising-not-allowed-list) li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.fundraising-panel ul:not(.fundraising-allowed-list):not(.fundraising-not-allowed-list) li:not(:last-child)::after {
+    content: ', ';
+}
