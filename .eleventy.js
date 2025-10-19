@@ -32,7 +32,7 @@ module.exports = function(eleventyConfig) {
     return new CleanCSS({}).minify(code).styles;
   });
 
-  eleventyConfig.addNunjucksShortcode("fundraisingPanel", function(logo, title, description, buttonText, buttonLink, code, codeMessage, allowedItems, notAllowedItems) {
+  eleventyConfig.addNunjucksShortcode("fundraisingPanel", function(logo, title, description, buttonText, buttonLink, code, codeMessage, allowedItems, notAllowedItems, panelClass) {
     let buttonHtml = '';
     if (buttonText && buttonLink) {
       buttonHtml = `<a href="${buttonLink}" class="fundraising-button">${buttonText}</a>`;
@@ -70,8 +70,13 @@ module.exports = function(eleventyConfig) {
       headerContent = `<a href="${buttonLink}" class="fundraising-header-link">${headerContent}</a>`;
     }
 
+    const panelClasses = ["fundraising-panel"];
+    if (panelClass) {
+      panelClasses.push(panelClass);
+    }
+
     return `
-      <div class="fundraising-panel">
+      <div class="${panelClasses.join(' ')}">
         ${headerContent}
         ${renderedDescription}
         ${allowedHtml}

@@ -364,3 +364,22 @@ body {
 .fundraising-panel ul:not(.fundraising-allowed-list):not(.fundraising-not-allowed-list) li:not(:last-child)::after {
     content: ', ';
 }
+
+/* Styles for panels with no-circle-logo class */
+.fundraising-panel.no-circle-logo .fundraising-logo-container {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0;
+    display: block; /* Revert to block display */
+    margin-bottom: 1rem;
+}
+
+.fundraising-panel.no-circle-logo .fundraising-logo {
+    width: auto;
+    height: auto;
+    max-width: 120px; /* Allow larger logos, but with a max width */
+    max-height: 80px; /* Allow larger logos, but with a max height */
+    object-fit: contain; /* Ensure the entire logo is visible */
+    color: inherit; /* Inherit color for SVGs, no effect on PNGs */
+}
