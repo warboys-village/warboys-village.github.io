@@ -1,5 +1,5 @@
 ---
 layout: ptfa-events
-title: Upcoming Events
+title: Events Calendar
 permalink: /ptfa/events/
 ---

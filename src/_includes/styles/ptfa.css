@@ -120,15 +120,13 @@ body {
 }
 
 .sidebar-calendar-widget {
-    float: right;
-    width: 280px; /* Adjust width as needed */
     padding: 1.5rem;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    margin-left: 2rem;
     margin-bottom: 2rem;
+    box-sizing: border-box; /* Added */
 }
 
 .sidebar-calendar-widget h3 {
@@ -383,3 +381,96 @@ body {
     object-fit: contain; /* Ensure the entire logo is visible */
     color: inherit; /* Inherit color for SVGs, no effect on PNGs */
 }
+
+/* Desktop styles for calendar widget */
+@media (min-width: 769px) {
+    .events-page-flex-container {
+        display: flex;
+        gap: 2rem; /* Space between main content and sidebar */
+        align-items: flex-start; /* Align items to the top */
+        width: 100%; /* Ensure it fills ptfa-main */
+    }
+
+    .events-main-content {
+        flex-grow: 1; /* Allow main content to take up available space */
+        min-width: 0; /* Allow content to shrink if needed */
+    }
+
+    .sidebar-calendar-widget {
+        flex-shrink: 0;
+        flex-basis: 250px; /* Fixed width for sidebar on desktop */
+        width: auto; /* Reset width to allow flex-basis to take over */
+        margin-left: 0; /* Remove margin-left when part of flex */
+        float: none; /* Remove float when part of flex */
+    }
+
+    .sidebar-calendar-widget details.mobile-collapsible-calendar > summary {
+        display: none; /* Hide summary on desktop */
+    }
+
+    .sidebar-calendar-widget details.mobile-collapsible-calendar > .calendar-links {
+        display: flex !important; /* Ensure content is always visible */
+    }
+}
+
+@media (max-width: 768px) {
+    .fundraising-panels {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+
+    .sidebar-calendar-widget {
+        float: none;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1rem; /* Adjust padding for mobile */
+    }
+
+    .sidebar-calendar-widget details.mobile-collapsible-calendar {
+        border: none; /* Remove border from details on mobile */
+        box-shadow: none; /* Remove shadow from details on mobile */
+    }
+
+    .sidebar-calendar-widget summary {
+        display: block; /* Show summary on mobile */
+        cursor: pointer;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 0.5rem;
+        list-style: none; /* Remove default arrow */
+        position: relative;
+    }
+
+    .sidebar-calendar-widget summary::-webkit-details-marker {
+        display: none; /* Hide default arrow for webkit browsers */
+    }
+
+    .sidebar-calendar-widget summary::after {
+        content: '+'; /* Custom expand indicator */
+        position: absolute;
+        right: 0.5rem;
+        font-size: 1.2em;
+        color: #00A99D;
+    }
+
+    .sidebar-calendar-widget details[open] summary::after {
+        content: '-'; /* Custom collapse indicator */
+    }
+
+    .sidebar-calendar-widget h3 {
+        margin-bottom: 0; /* Adjust margin for summary */
+        border-bottom: none; /* Remove border from h3 inside summary */
+        padding-bottom: 0;
+        display: inline-block; /* Allow h3 to sit next to custom indicator */
+    }
+
+    .sidebar-calendar-widget .calendar-links {
+        display: none; /* Hide links by default on mobile */
+        margin-top: 0.5rem; /* Adjust margin for links when expanded */
+    }
+
+    .sidebar-calendar-widget details[open] .calendar-links {
+        display: flex; /* Show links when details is open on mobile */
+    }
+}
+
