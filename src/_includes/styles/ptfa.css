@@ -251,7 +251,7 @@ body {
     font-size: 0.95rem;
     line-height: 1.6;
     flex-grow: 1; /* Allows description to take up available space */
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem; /* Reduced margin */
 }
 
 .fundraising-button {
