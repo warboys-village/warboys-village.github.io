@@ -12,11 +12,13 @@ layout: ptfa-base
         <div class="event-listing">
           <h2><a href="{{ event.url }}">{{ event.data.title }}</a></h2>
           <p><strong>Date:</strong> {{ event.data.date | date("D MMMM YYYY") }}</p>
-          <p>{{ event.data.summary }}</p>
+          <p>{{ event.data.summary }}...</p>
+          <p><a href="{{ event.url }}">More details</a></p>
         </div>
       {% endfor %}
     </div>
 
+{% if false and collections.futureEvents and collections.futureEvents.length > 0 %}
     <hr>
 
     <h2>Future Events</h2>
@@ -30,22 +32,16 @@ layout: ptfa-base
         </div>
       {% endfor %}
     </div>
+{% endif %}
   </div>
 
   <div class="sidebar-calendar-widget">
     <details class="mobile-collapsible-calendar" open>
       <summary><h3>Subscribe to the calendar</h3></summary>
       <div class="calendar-links">
-        <a href="webcal://warboys.uk/ptfa/events/calendar.ics" target="_blank" rel="noopener noreferrer" class="calendar-button">
-          <img src="/images/google-calendar-icon.svg" alt="Google Calendar">
-          <span>Google Calendar</span>
-        </a>
-        <a href="webcal://warboys.uk/ptfa/events/calendar.ics" target="_blank" rel="noopener noreferrer" class="calendar-button">
-          <img src="/images/apple-calendar-icon.svg" alt="Apple Calendar">
-          <span>Apple Calendar</span>
-        </a>
-        <a href="/ptfa/events/calendar.ics" class="calendar-button calendar-button-other">
-          <span>Other (.ics file)</span>
+        <p>Subscribe to the calendar feed to get all the events added to your phone or computer calendar automatically.</p>
+        <a href="/ptfa/events/calendar.ics" class="calendar-button">
+          <span>Subscribe to Calendar</span>
         </a>
       </div>
     </details>

@@ -89,6 +89,15 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("src/images");
 
+  eleventyConfig.addTransform("content-type", function(content, outputPath) {
+    if (this.page && this.page.contentType) {
+      this.page.headers = {
+        "Content-Type": this.page.contentType
+      };
+    }
+    return content;
+  });
+
   // Return your Object options:
   return {
     markdownTemplateEngine: "njk",
