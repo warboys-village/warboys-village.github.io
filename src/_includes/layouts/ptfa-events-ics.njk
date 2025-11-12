@@ -15,7 +15,7 @@ DTSTAMP:{{ event.date | date("YYYYMMDDTHHmmss") }}
 DTSTART;VALUE=DATE:{{ event.date | date("YYYYMMDD") }}
 SUMMARY:{{ event.data.title }}
 DESCRIPTION:{{ event.data.summary }}
-URL:{{ event.url }}
+URL:https://warboys.uk{{ event.url }}
 END:VEVENT
 {% endfor %}
 END:VCALENDAR
