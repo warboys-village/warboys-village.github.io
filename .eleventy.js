@@ -89,6 +89,8 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("src/images");
 
+  eleventyConfig.addPassthroughCopy({"src/ptfa/manifest.webmanifest": "ptfa/manifest.webmanifest"});
+
   eleventyConfig.addTransform("content-type", function(content, outputPath) {
     if (this.page && this.page.contentType) {
       this.page.headers = {
