@@ -4,6 +4,10 @@ body {
     background: #f9f9f9;
 }
 
+.centred {
+    text-align: center;
+}
+
 .ptfa-header {
     background: #005D43;
     padding: 0.5rem 1rem;
